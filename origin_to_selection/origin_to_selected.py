@@ -22,7 +22,8 @@ class OriginToSelection(bpy.types.Operator):
 
     @classmethod
     def poll(cls, context):
-        return (context.mode == 'OBJECT' or context.mode == 'EDIT') and context.area.type == 'VIEW_3D'
+        #return (context.mode == 'OBJECT' or context.mode == 'EDIT') and context.area.type == 'VIEW_3D'
+        return context.area.type == 'VIEW_3D'
 
     def execute(self, context):
         # Save state
